@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<script src="https://kit.fontawesome.com/a68a22281a.js" crossorigin="anonymous"></script>
+
+<style>
+
+*{
+margin:0px;
+padding:0px;
+}
+
+.bgimage{
+background-image: url('abc.jpg');
+background-size: 100% 110%;
+width: 100%;
+height: 100vh;
+}
+
+.menu{
+
+width: 100%;
+height: 100px;
+background-color: rgba(0,0,0,0.5);
+}
+
+.leftmenu{
+width: 20%;
+line-height: 100px;
+float: left;
+/*background-color: yellow;*/
+}
+
+.leftmenu h4{
+padding-left: 70px;
+font-weight: bold;
+color: white;
+font-size: 22px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.rightmenu{
+width:70%;
+height: 100px;
+float: right;
+/*background-color: red; */
+}
+
+.rightmenu ul{
+margin-left: 200px;
+}
+
+.rightmenu ul li {
+font-family: 'Montserrat', sans-serif;
+display: inline-block;
+list-style: none;
+font-size: 15px;
+color:white;
+font-weight: bold;
+line-height: 100px;
+margin-left: 40px;
+text-transform: uppercase;
+
+}
+
+#fisrtlist{
+color: orange;
+}
+
+.rightmenu ul li:hover{
+color: orange;
+}
+
+
+.text{
+width: 100%;
+margin-top: 185px;
+text-transform: uppercase;
+text-align: center;
+color:white;
+}
+
+.text h4{
+
+font-size: 14px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.text h1{
+font-size:62px;
+font-family: 'Montserrat', sans-serif;
+font-weight: 700px;
+margin:14px 0px;
+}
+
+.text h3{
+font-size: 12px;
+font-family: 'Open Sans', sans-serif;
+}
+
+.icons-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+   gap: 1.5rem;
+}
+
+.icons-container .icons{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   padding: 2rem 0;
+
+}
+
+.icons-container .icons i{
+   font-size: 3.5rem;
+   color: green;
+}
+
+.icons-container .icons h3{
+   font-size: 1.8rem;
+   color: black;
+   padding-bottom: .5rem;
+}
+
+.icons-container .icons p{
+   font-size: 1.2rem;
+   color: rgb(96, 96, 96);
+   padding-bottom: .5rem;
+}
+
+#buttonone{
+background-color: white;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+line-height: 40px;
+width: 150px;
+font-family: 'Montserrat', sans-serif;
+margin-top: 25px;
+border: 3px solid white;
+}
+
+#buttonone span{
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+}
+
+#buttonone span:after{
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+}
+
+#buttonone:hover span {
+   padding-right: 25px;
+ }
+
+ #buttonone:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+
+
+#buttontwo{
+background-color: transparent;
+border-radius: 20px;
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+font-weight: bold;
+line-height: 40px;
+border: 3px solid white;
+width: 150px;
+}
+
+#buttontwo:hover{
+   background-color: transparent;
+}
+
+#buttontwo:active {
+   background-color: lightgrey;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+ }
+
+.features{
+   padding: 50px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.feature{
+   text-align: center;
+   max-width: 300px;
+}
+
+.feature-title{
+   font-size: 24px;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.feature-text{
+   font-size: 16px;
+   color: #555;
+}
+
+.footer{
+   background-color:  rgba(0,0,0,0.3);
+}
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap: 1.5rem;
+   
+}
+ .footer .box-container .box h3{
+   font-size: 2.2rem;
+   color: black;
+   margin-top: 40px;
+   
+ }
+
+ .footer .box-container .box a{
+   display: block;
+   font-size: 1.4rem;
+   color: black;
+   padding: 0.5rem 0;
+ }
+
+ .footer .box-container .box a i{
+   color: green;
+   padding-right: .5rem;
+ }
+
+ .footer .box-container .box a:hover i{
+   padding-right: 2rem;
+   color: black;
+ }
+
+ .footer .box-container .box1 h1{
+   padding: 1rem 0;
+   text-align: center;
+   justify-content: center;
+ }
+
+ .footer .box1 a{
+   height: 5rem;
+   width: 5rem;
+   line-height: 5rem;
+   font-size: 2rem;
+   color: green;
+   margin: 0 .3rem;
+   border-radius: 50%;
+ }
+ .footer .box1 a:hover{
+   background: rgba(0,0,0,0.2);
+ }
+
+ .footer .credit{
+   border-top: var(--border);
+   margin-top: 0.5rem;
+   padding: 0 1rem;
+   padding-top: 2.5rem;
+   font-size: 2rem;
+   text-align: center;
+ }
+
+ .footer .credit span{
+   color: green;
+ }
+
+</style>
+
+<body>
+
+<div class="bgimage">
+<div class="menu">
+	
+<!-- Header Section -->
+<div class="leftmenu">
+<h4> BOOKSHOP</h4>
+</div>
+
+<div class="rightmenu">
+<ul>
+<li id="fisrtlist"> HOME </li>
+<li> Featured </li>
+<li> Arrivals</li>
+<li> Reviews</li>
+<li> Blogs</li>
+<li>contact</li>
+</ul>
+</div>
+</div>
+
+<div class="text">
+<h4> READING IS THE BEST FOR GET IDEAS </h4>
+<h1> KEEP READING </h1>
+<h3> Online Learning Anytime,Anywhere! </h3>
+<button id="buttonone"><span> See More</span> </button>
+<button id="buttontwo"> Buy Now </button> 
+</div>
+</div>
+
+<section class="icons-container">
+   <div class="icons">
+      <i class="fa-solid fa-truck-fast"></i>
+      <div class="content">
+      <h3>Free Shipping</h3>
+      <p>order over $100</p>
+   </div>
+   </div>
+
+   <div class="icons">
+      <i class="fa-solid fa-lock"></i>
+      <div class="content">
+      <h3>Secure Payment</h3>
+      <p>100 Secure Payment </p>
+   </div>
+   </div>
+
+   <div class="icons">
+      <i class="fa-solid fa-rotate-right"></i>
+      <div class="content">
+      <h3>Easy Returns</h3>
+      <p>10 Days Returns</p>
+   </div>
+   </div>
+
+   <div class="icons">
+      <i class="fa-solid fa-headset"></i>
+      <div class="content">
+      <h3>24/7 Support</h3>
+      <p>Call us Anytime</p>
+   </div>
+   </div>
+</section>
+
+<!--Footer Section-->
+<section class="footer">
+   <div class="box-container">
+      <div class="box">
+         <h3>Our locations</h3>
+         <a href="#"><i class="fa-solid fa-location-dot"></i>India</a>
+         <a href="#"><i class="fa-solid fa-location-dot"></i>USA</a>
+         <a href="#"><i class="fa-solid fa-location-dot"></i>Russia</a>
+         <a href="#"><i class="fa-solid fa-location-dot"></i>America</a>
+         <a href="#"><i class="fa-solid fa-location-dot"></i>France</a>
+      </div>
+      <div class="box">
+         <h3>Quick Links</h3>
+         <a href="#"><i class="fa-solid fa-play"></i>Home</a>
+         <a href="#"><i class="fa-solid fa-play"></i>Features</a>
+         <a href="#"><i class="fa-solid fa-play"></i>Arrivate</a>
+         <a href="#"><i class="fa-solid fa-play"></i>Reviews</a>
+         <a href="#"><i class="fa-solid fa-play"></i>Blogs</a>
+      </div>
+      <div class="box">
+         <h3>Contact Info</h3>
+         <a href="#"><i class="fa-solid fa-phone"></i>+123-456-789</a>
+         <a href="#"><i class="fa-solid fa-phone"></i>+111-222-333</a>
+         <a href="#"><i class="fa-solid fa-envelope"></i>anushka@gmail.com</a>
+      </div>
+
+      <div class="box1">
+         <h1>Social Media</h1>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+   </div>
+   </div>
+
+  <div class="credit">created by <span>web desginer</span> | all right reserved|</div>
+
+</section>
+
+</body>
+</html>

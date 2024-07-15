@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+</head>
+
+<style>
+     *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          background-color: #20222e;
+          color: white;
+          border: none;
+          
+     }
+
+     body{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          width: 100%;
+          height: 100vh;
+     }
+
+     form{
+          width: 300px;
+          height: 550px;
+          padding: 1em 0.7em;
+          border-radius: 2em;
+     }
+
+     .fancy{
+          margin: 1em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     .circle{
+          width: 5px;
+          height: 5px;
+          border-radius: 50px;
+          margin-right: 5px;
+          box-shadow: inset 2px 2px 2px #1a1b22, inset -2px -2px -2px #2f3038;
+     }
+
+     .rectangle{
+          width: 35px;
+          height: 5px;
+          border-radius: 5px;
+          box-shadow: inset 2px 2px 2px #1a1b22, inset -2px -2px -2px #2f3038;
+
+     }
+
+     .display{
+          margin-top: 3.5vh;
+          padding-top: 10vh;
+          box-shadow: inset 5px 5px 5px #1a1b22, inset -5px -5px 5px #2f3038;
+     }
+
+     .display input{
+          width: 100%;
+          text-align: right;
+          padding-right: 2em;
+          border: none;
+          background: none;
+          outline: none;
+          font-size: 15px;
+     }
+
+     #system{
+          display: none;
+     }
+
+     #solution{
+          font-size: xx-large;
+          padding: 20px;
+     }
+     .buttons{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+     }
+     .buttons input{
+          width: 50px;
+          height: 50px;
+          font-size: x-large;
+          margin: 5px;
+          border-radius: 50px;
+          box-shadow: 5px 5px 10px #1a1a22, -5px -5px 10px #303138;
+          outline: none;
+          cursor: pointer;
+     }
+
+     .buttons input:hover,
+     .buttons input:focus{
+          background-color: #9fb1df;
+     }
+
+</style>
+<body>
+<form name="calculator">
+   <div class="fancy">
+       <div class="circle"></div>
+       <div class="rectangle"></div>                                                                                   
+   </div> 
+   <div class="display">
+        <input type="text" name="solve" id="solve" readonly>   
+        <input type="text" name="system" id="system" readonly>
+        <input type="text" name="solution" id="solution" readonly>                                                                               
+   </div>                                            
+   <div class="buttons">
+        <input type="button" value="C" onclick="document.getElementById('solve')
+        .value = '', document.getElementById('solution').value = '', document.getElementById('system').value = '' "> 
+        
+        <input type="button" value="(" onclick="document.getElementById('solve')
+        .value += '(', document.getElementById('system').value += '(' "> 
+
+        <input type="button" value=")" onclick="document.getElementById('solve')
+        .value += ')', document.getElementById('system').value += ')' "> 
+        
+        <input type="button" value="%" onclick="document.getElementById('solve')
+        .value += '%', document.getElementById('system').value += '%' ">
+        
+        <input type="button" value="7" onclick="document.getElementById('solve')
+        .value += '7', document.getElementById('system').value += '7' ">
+
+        <input type="button" value="8" onclick="document.getElementById('solve')
+        .value += '8', document.getElementById('system').value += '8' ">
+
+        <input type="button" value="9" onclick="document.getElementById('solve')
+        .value += '9', document.getElementById('system').value += '9' ">
+
+        <input type="button" value="+" onclick="document.getElementById('solve')
+        .value += '+', document.getElementById('system').value += '+' ">
+
+        <input type="button" value="4" onclick="document.getElementById('solve')
+        .value += '4', document.getElementById('system').value += '4' ">
+
+        <input type="button" value="5" onclick="document.getElementById('solve')
+        .value += '5', document.getElementById('system').value += '5' ">
+
+        <input type="button" value="6" onclick="document.getElementById('solve')
+        .value += '6', document.getElementById('system').value += '6' ">
+
+        <input type="button" value="*" onclick="document.getElementById('solve')
+        .value += '*', document.getElementById('system').value += '*' ">
+
+        <input type="button" value="1" onclick="document.getElementById('solve')
+        .value += '1', document.getElementById('system').value += '1' ">
+
+        <input type="button" value="2" onclick="document.getElementById('solve')
+        .value += '2', document.getElementById('system').value += '2' ">
+
+        <input type="button" value="3" onclick="document.getElementById('solve')
+        .value += '3', document.getElementById('system').value += '3' ">
+
+        <input type="button" value="-" onclick="document.getElementById('solve')
+        .value += '-', document.getElementById('system').value += '-' ">
+
+        <input type="button" value="0" onclick="document.getElementById('solve')
+        .value += '0', document.getElementById('system').value += '0' ">
+
+        <input type="button" value="." onclick="document.getElementById('solve')
+        .value += '.', document.getElementById('system').value += '.' ">
+
+        <input type="button" value="=" onclick="document.getElementById('solve')
+        .value += '=', document.getElementById('solution').value = eval(document.getElementById('system').value) ">
+
+        <input type="button" value="/" onclick="document.getElementById('solve')
+        .value += '/', document.getElementById('solution').value += '/', document.getElementById('system').value += '/' ">      
+   </div>                    
+
+</form>                                                                              
+</body>
+</html>
